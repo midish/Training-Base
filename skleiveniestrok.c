@@ -20,7 +20,7 @@ int     main(void)
     int i = 0;
     int j = 0;
 
-    c = (char *)malloc(sizeof(char) + ft_strlen(a) + ft_strlen(b) + 1);
+    c = (char *)malloc(sizeof(char *) + ft_strlen(a) + ft_strlen(b) + 1);
     while (b[j] != '\0')
     {
         if (a[i] != '\0')
