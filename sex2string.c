@@ -4,17 +4,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int     ft_strlen(char *str)
-{
-    int i = 0;
-    
-    while (*str != '\0')
-    {
-        i++;
-    }
-    return (i);
-}
-
 // Функция будет принимать двухмерный массив строк и возращать двухмерный char массив в виде array[9][9]
 char     **sex2string(char **strings)
 {
