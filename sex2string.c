@@ -14,21 +14,21 @@ char     **sex2string(char **strings)
     int y = 0;
     
     // Выделяю память под matrix[x]
-    matrix = (char **) malloc(3 * sizeof(char *));
+    matrix = (char **) malloc(9 * sizeof(char *));
     // Выделяю память под matrix[x][y]
-    while (i < 3)
+    while (i < 9)
     {
-        matrix[i] = (char *) malloc(3 * sizeof(char));
+        matrix[i] = (char *) malloc(9 * sizeof(char));
         i++;
     }
     // Присваиваю значение хранящееся в массиве из main, массиву matrix
     // Сначала для первого уровня matrix[x]
-    while (x < 3)
+    while (x < 9)
     {
         matrix[x] = strings[x];
         x++;
         // Затем для второго уровня matrix[x][y]
-        while (y < 3)
+        while (y < 9)
         {
             matrix[x][y] = strings[x][y];
             y++;
@@ -42,14 +42,14 @@ char     **sex2string(char **strings)
 int     main(void)
 {
     int i = 0;
-    char *sexystrings[3] = { "123", "456", "789" };
+    char *sexystrings[9] = { "123", "456", "789", "123", "456", "789", "123", "456", "789" };
     // Двумерный массив будет хранит ЦИФРЫ в виде [1...9][1...9]
     char **sudokumatrix;
     // Печатаю в консоль каждую строку в sudokumatrix[i]
     sudokumatrix = sex2string(sexystrings);
-    while (i < 3)
+    while (i < 9)
     {
-        printf("%s", sudokumatrix[i]);
+        printf("%s\n", sudokumatrix[i]);
         i++;
     }
     return (0);
