@@ -46,9 +46,9 @@ int     main(void)
     // Двумерный массив будет хранит ЦИФРЫ в виде [1...9][1...9]
     char **sudokumatrix;
     // Печатаю в консоль каждую строку в sudokumatrix[i]
+    sudokumatrix = sex2string(sexystrings);
     while (i < 3)
     {
-        sudokumatrix = sex2string(sexystrings);
         printf("%s", sudokumatrix[i]);
         i++;
     }
